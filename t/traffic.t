@@ -13,7 +13,7 @@ plan tests => repeat_each() * (blocks() * 4);
 my $pwd = cwd();
 
 our $HttpConfig = <<_EOC_;
-    lua_package_path "$pwd/lib/?.lua;;";
+    lua_package_path "$pwd/../lua-resty-core/lib/?.lua;../lua-resty-lrucache/lib/?.lua;$pwd/lib/?.lua;;";
     init_by_lua_block {
         local v = require "jit.v"
         -- v.on("/tmp/a.dump")

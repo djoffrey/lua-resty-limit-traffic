@@ -13,8 +13,11 @@ Table of Contents
     * [new](#new)
     * [incoming](#incoming)
     * [uncommit](#uncommit)
+* [Limiting Granularity](#limiting-granularity)
 * [Installation](#installation)
-* [Author](#author)
+* [Bugs and Patches](#bugs-and-patches)
+* [Authors](#authors)
+* [Copyright and License](#copyright-and-license)
 * [See Also](#see-also)
 
 Synopsis
@@ -79,7 +82,7 @@ This module depends on [lua-resty-core](https://github.com/openresty/lua-resty-c
 
 ```nginx
 init_by_lua_block {
-        require "resty.core"
+    require "resty.core"
 }
 ```
 
@@ -136,6 +139,8 @@ this method returns `nil` and the error string `"rejected"`.
 3. If an error occurred (like failures when accessing the `lua_shared_dict` shm zone backing
 the current object), then this method returns `nil` and a string describing the error.
 
+[Back to TOC](#table-of-contents)
+
 uncommit
 --------
 **syntax:** `remaining, err = obj:uncommit(key)`
@@ -170,11 +175,11 @@ Please report bugs or submit patches by
 
 [Back to TOC](#table-of-contents)
 
-Author
-======
+Authors
+=======
 
-Ke Zhu <kzhu@us.ibm.com>.
-Ming Wen <moonbingbing@gmail.com>
+* Ke Zhu <kzhu@us.ibm.com>
+* Ming Wen <moonbingbing@gmail.com>
 
 [Back to TOC](#table-of-contents)
 
